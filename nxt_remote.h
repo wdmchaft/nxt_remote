@@ -11,7 +11,7 @@
 enum {
     kNXTRet   = 0x00, /*!< Command returns a value */
     kNXTNoRet = 0x80, /*!< Command does not return a value */
-    kNXTSysOP = 0x01  /*!< Command is a system operation      */
+    kNXTSysOP = 0x01  /*!< Command is a system operation */
 };
 
 
@@ -104,8 +104,8 @@ enum {
     kNXTTransitionCntMode   = 0x40, /*!< */
     kNXTPeriodCounterMode   = 0x60, /*!< */
     kNXTPCTFullScaleMode    = 0x80, /*!< */
-    kNXTCelciusMode         = 0xA0, /*!< */
-    kNXTFahrenheitMode      = 0xC0, /*!< */
+    kNXTCelciusMode         = 0xA0, /*!< Celcius*/
+    kNXTFahrenheitMode      = 0xC0, /*!< Fahrenheit*/
     kNXTAngleStepsMode      = 0xE0, /*!< */
     kNXTSlopeMask           = 0x1F, /*!< */
     kNXTModeMask            = 0xE0  /*!< */
