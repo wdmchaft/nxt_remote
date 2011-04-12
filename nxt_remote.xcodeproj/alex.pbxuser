@@ -1,0 +1,205 @@
+// !$*UTF8*$!
+{
+	256AC3D80F4B6AC300CF3369 /* nxt_remoteAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {932, 270}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 251}";
+		};
+	};
+	256AC3D90F4B6AC300CF3369 /* nxt_remoteAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {932, 521}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 384}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = FAD5985D1329423D00DD38CC /* nxt_remote */;
+		activeTarget = 8D1107260486CEB800E47090 /* nxt_remote */;
+		addToTargets = (
+			8D1107260486CEB800E47090 /* nxt_remote */,
+		);
+		breakpoints = (
+		);
+		codeSenseManager = FAD598771329424700DD38CC /* Code sense */;
+		executables = (
+			FAD5985D1329423D00DD38CC /* nxt_remote */,
+		);
+		perUserDictionary = {
+			"PBXConfiguration.PBXBreakpointsDataSource.v1:1CA23EDF0692099D00951B8B" = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBreakpointsDataSource_BreakpointID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					216,
+					20,
+					216,
+					216,
+					216,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBreakpointsDataSource_ActionID,
+					PBXBreakpointsDataSource_TypeID,
+					PBXBreakpointsDataSource_BreakpointID,
+					PBXBreakpointsDataSource_UseID,
+					PBXBreakpointsDataSource_LocationID,
+					PBXBreakpointsDataSource_ConditionID,
+					PBXBreakpointsDataSource_IgnoreCountID,
+					PBXBreakpointsDataSource_ContinueID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					10,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 321566966;
+			PBXWorkspaceStateSaveDate = 321566966;
+		};
+		perUserProjectItems = {
+			FAE1E838132ABD4300BD08B6 /* PBXTextBookmark */ = FAE1E838132ABD4300BD08B6 /* PBXTextBookmark */;
+			FAE1E839132ABD4300BD08B6 /* PBXTextBookmark */ = FAE1E839132ABD4300BD08B6 /* PBXTextBookmark */;
+			FAE1E847132ABD6600BD08B6 /* PBXTextBookmark */ = FAE1E847132ABD6600BD08B6 /* PBXTextBookmark */;
+			FAE1E848132ABD6600BD08B6 /* PBXTextBookmark */ = FAE1E848132ABD6600BD08B6 /* PBXTextBookmark */;
+			FAE1E849132ABD6600BD08B6 /* PBXTextBookmark */ = FAE1E849132ABD6600BD08B6 /* PBXTextBookmark */;
+		};
+		sourceControlManager = FAD598761329424700DD38CC /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	8D1107260486CEB800E47090 /* nxt_remote */ = {
+		activeExec = 0;
+		executables = (
+			FAD5985D1329423D00DD38CC /* nxt_remote */,
+		);
+	};
+	FA44A76C132A7F45009EC667 /* nxt_remote.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1076, 4335}}";
+			sepNavSelRange = "{174, 0}";
+			sepNavVisRange = "{0, 1557}";
+		};
+	};
+	FA44A76D132A7F56009EC667 /* nxt_remote.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1332, 13785}}";
+			sepNavSelRange = "{4710, 0}";
+			sepNavVisRange = "{0, 512}";
+		};
+	};
+	FAD5985D1329423D00DD38CC /* nxt_remote */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = nxt_remote;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	FAD598761329424700DD38CC /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	FAD598771329424700DD38CC /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	FAE1E838132ABD4300BD08B6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* nxt_remoteAppDelegate.m */;
+		name = "nxt_remoteAppDelegate.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 384;
+		vrLoc = 0;
+	};
+	FAE1E839132ABD4300BD08B6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D80F4B6AC300CF3369 /* nxt_remoteAppDelegate.h */;
+		name = "nxt_remoteAppDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 251;
+		vrLoc = 0;
+	};
+	FAE1E847132ABD6600BD08B6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA44A76D132A7F56009EC667 /* nxt_remote.m */;
+		name = "nxt_remote.m: 212";
+		rLen = 0;
+		rLoc = 4710;
+		rType = 0;
+		vrLen = 512;
+		vrLoc = 0;
+	};
+	FAE1E848132ABD6600BD08B6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA44A76C132A7F45009EC667 /* nxt_remote.h */;
+		name = "nxt_remote.h: 6";
+		rLen = 0;
+		rLoc = 174;
+		rType = 0;
+		vrLen = 1557;
+		vrLoc = 0;
+	};
+	FAE1E849132ABD6600BD08B6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA44A76C132A7F45009EC667 /* nxt_remote.h */;
+		name = "nxt_remote.h: 6";
+		rLen = 0;
+		rLoc = 174;
+		rType = 0;
+		vrLen = 1557;
+		vrLoc = 0;
+	};
+}

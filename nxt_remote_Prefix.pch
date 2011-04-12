@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'nxt_remote' target in the 'nxt_remote' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
