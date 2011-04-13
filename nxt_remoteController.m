@@ -119,27 +119,34 @@
         loopB = NO;
     }
     
-    NSString* soundFile;
-    soundFile = [soundFileField stringValue];
-    
-    NSRange rsoRange;
-    rsoRange = [soundFile rangeOfString:@".rso"];
-    
-    if (rsoRange.length == 0) {
-        soundFile = [soundFile stringByAppendingString:@".rso"];
-    }
-    
     if (soundStarted == NO) {
         
+        NSString* soundFile;
+        soundFile = [soundFileField stringValue];
+        
+        NSRange rsoRange;
+        rsoRange = [soundFile rangeOfString:@".rso"];
+        
+        if (rsoRange.length == 0) {
+            soundFile = [soundFile stringByAppendingString:@".rso"];
+        }
+        
+        if ([soundFile isEqualToString:@".rso"]) {
+            // make foo
+        }
+        else {
+            
         [_nxt playSoundFile:soundFile loop:loopB];
         [sender setTitle:@"Stop sound"];
         soundStarted = YES;
+        
+        }
     }
     else {
         [_nxt stopSoundPlayback];
         [sender setTitle:@"Play SoundFile"];
         soundStarted = NO;
-    }
+        }
 }
 
 -(void)stopProgram{
