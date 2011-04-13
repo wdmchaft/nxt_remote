@@ -3,7 +3,6 @@
 //  nxt_remote
 //
 //  Created by Alexander Zautke on 3/10/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
 #import "nxt_remoteAppDelegate.h"

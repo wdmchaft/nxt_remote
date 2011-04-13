@@ -15,6 +15,8 @@
 		FA1EC14F132B75EC006BCB70 /* IOBluetoothUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1EC14E132B75EC006BCB70 /* IOBluetoothUI.framework */; };
 		FA1EC151132B8E0D006BCB70 /* IOBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1EC150132B8E0D006BCB70 /* IOBluetooth.framework */; };
 		FA1EC154132B918A006BCB70 /* nxt_remoteController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1EC153132B918A006BCB70 /* nxt_remoteController.m */; };
+		FA3A43A91355C69B00865629 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = FA3A43A81355C69B00865629 /* LICENSE */; };
+		FA3A43AB1355C6A700865629 /* README in Resources */ = {isa = PBXBuildFile; fileRef = FA3A43AA1355C6A700865629 /* README */; };
 		FA44A76E132A7F56009EC667 /* nxt_remote.m in Sources */ = {isa = PBXBuildFile; fileRef = FA44A76D132A7F56009EC667 /* nxt_remote.m */; };
 		FA455EB0132D4CAD0006095F /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = FA455EAF132D4CAD0006095F /* icon.icns */; };
 /* End PBXBuildFile section */
@@ -36,6 +38,8 @@
 		FA1EC150132B8E0D006BCB70 /* IOBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOBluetooth.framework; path = System/Library/Frameworks/IOBluetooth.framework; sourceTree = SDKROOT; };
 		FA1EC152132B918A006BCB70 /* nxt_remoteController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nxt_remoteController.h; sourceTree = "<group>"; };
 		FA1EC153132B918A006BCB70 /* nxt_remoteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = nxt_remoteController.m; sourceTree = "<group>"; };
+		FA3A43A81355C69B00865629 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		FA3A43AA1355C6A700865629 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		FA44A76C132A7F45009EC667 /* nxt_remote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nxt_remote.h; sourceTree = "<group>"; };
 		FA44A76D132A7F56009EC667 /* nxt_remote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = nxt_remote.m; sourceTree = "<group>"; };
 		FA455EAF132D4CAD0006095F /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 				FA455EAF132D4CAD0006095F /* icon.icns */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+				FA3A43AA1355C6A700865629 /* README */,
+				FA3A43A81355C69B00865629 /* LICENSE */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -190,6 +196,8 @@
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				FA455EB0132D4CAD0006095F /* icon.icns in Resources */,
+				FA3A43A91355C69B00865629 /* LICENSE in Resources */,
+				FA3A43AB1355C6A700865629 /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
