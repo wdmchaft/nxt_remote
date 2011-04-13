@@ -284,9 +284,10 @@
 // handle errors
 - (void)NXTOperationError:(NXT*)nxt operation:(UInt8)operation status:(UInt8)status
     {
-        // error code in hex
+        NSString* errorMessage;
         NSLog(@"nxt error: operation=0x%x status=0x%x", operation, status);
-        [errorField setIntValue:status];
+        errorMessage = [NSString stringWithFormat:@"0x%x",status];
+        [errorField setStringValue:errorMessage];
    }
 
 // disconnected
