@@ -525,7 +525,8 @@
 	    
 	// send the message
 	[self sendMessage:message length:22];
-        NSLog(@"Programm started");
+    NSLog(@"Programm started");
+    
     }
 }
 
@@ -549,6 +550,7 @@
 {
     if (connected) {
         
+    // construct the message
 	char message[] = {
 		kNXTRet,
 		kNXTGetCurrentProgramName
@@ -556,7 +558,7 @@
    
 	// send the message
 	[self sendMessage:message length:2];
-    NSLog(@"Get Current Program Name");
+    NSLog(@"Get current program name");
     
     }
 }
@@ -564,6 +566,8 @@
 - (void)playSoundFile:(NSString*)soundfile loop:(BOOL)loop
 {
     if (connected) {
+    
+    // construct the message
 	char message[23] = {
 	kNXTRet,
 	kNXTPlaySoundFile,
@@ -574,7 +578,8 @@
        
 	// send the message
 	[self sendMessage:message length:23];
-        NSLog(@"playing soundFile");
+    NSLog(@"playing soundFile");
+    
     }
 }
 
@@ -644,7 +649,9 @@
 - (void)setInputMode:(UInt8)port type:(UInt8)type mode:(UInt8)mode
 {
 	NXT_ASSERT_SENSOR_PORT(port);
-    
+ 
+    if (connected) {
+        
 	// construct the message
 	char message[] = {
 		kNXTRet,
@@ -656,6 +663,9 @@
     
 	// send the message
 	[self sendMessage:message length:5];
+    NSLog(@"set InputMode");
+    
+    }
 }
  
 - (void)getOutputState:(UInt8)port
@@ -676,6 +686,8 @@
 {
 	NXT_ASSERT_SENSOR_PORT(port);
     
+    if (connected) {
+
 	// construct the message
 	char message[] = {
 		kNXTRet,
@@ -685,6 +697,9 @@
      
 	// send the message
 	[self sendMessage:message length:3];
+    NSLog(@"get InputValues");
+    
+    }
 }
 
 - (void)resetInputScaledValue:(UInt8)port
