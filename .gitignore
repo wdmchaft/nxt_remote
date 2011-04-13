@@ -1,6 +1,6 @@
-build/
-
+build/*
 *.pbxuser
+*.mode?v3
+*.perspectivev3
 *.xcworkspace
 xcuserdata
-.DS_Store
