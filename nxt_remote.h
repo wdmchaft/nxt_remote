@@ -127,7 +127,7 @@ enum {
 
 /*! Sensor Modes.  These modes control sensor operation. */
 enum {
-    kNXTRawMode             = 0x00, /*!< */
+    kNXTRawMode             = 0x00, /*!< 0 / 14? - 1023*/
     kNXTBooleanMode         = 0x20, /*!< True / False*/
     kNXTTransitionCntMode   = 0x40, /*!< */
     kNXTPeriodCounterMode   = 0x60, /*!< */
