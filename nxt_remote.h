@@ -131,9 +131,9 @@ enum {
     kNXTBooleanMode         = 0x20, /*!< True / False*/
     kNXTTransitionCntMode   = 0x40, /*!< */
     kNXTPeriodCounterMode   = 0x60, /*!< */
-    kNXTPCTFullScaleMode    = 0x80, /*!< */
-    kNXTCelciusMode         = 0xA0, /*!< Celcius*/
-    kNXTFahrenheitMode      = 0xC0, /*!< Fahrenheit*/
+    kNXTPCTFullScaleMode    = 0x80, /*!< 0 - 100*/
+    kNXTCelciusMode         = 0xA0, /*!< */
+    kNXTFahrenheitMode      = 0xC0, /*!< */
     kNXTAngleStepsMode      = 0xE0, /*!< */
     kNXTSlopeMask           = 0x1F, /*!< */
     kNXTModeMask            = 0xE0  /*!< */
