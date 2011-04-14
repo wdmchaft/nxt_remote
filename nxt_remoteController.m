@@ -169,21 +169,13 @@
         [_nxt setupSoundSensor:port dbA:YES];
         NSLog(@"Setup Sound dbA");
     }
-    if ([sensorName isEqualToString:@"Light"]) {
+    if ([sensorName isEqualToString:@"Light Active"]) {
         [_nxt setupLightSensor:port active:YES];
         NSLog(@"Setup Light");
     }
     if ([sensorName isEqualToString:@"Light Passive"]) {
         [_nxt setupLightSensor:port active:NO];
         NSLog(@"Setup Light Passive");
-    }
-    if ([sensorName isEqualToString:@"Temperature Celcius"]) {
-        [_nxt setupTemperatureSensor:port CelciusMode:YES];
-        NSLog(@"Setup Temperature Celcius");
-    }
-    if ([sensorName isEqualToString:@"Temperature Fahrenheit"]) {
-        [_nxt setupTemperatureSensor:port CelciusMode:NO];
-        NSLog(@"Setup Temperature Fahrenheit");
     }
 }
 

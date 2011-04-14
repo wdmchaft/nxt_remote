@@ -111,7 +111,7 @@ enum {
 enum {
     kNXTNoSensor            = 0x00, /*!< */
     kNXTSwitch              = 0x01, /*!< TouchSensor */
-    kNXTTemperature         = 0x02, /*!< TemperatureSensor*/
+    kNXTTemperature         = 0x02, /*!< */
     kNXTReflection          = 0x03, /*!< */
     kNXTAngle               = 0x04, /*!< */
     kNXTLightActive         = 0x05, /*!< LightSensor Active */
