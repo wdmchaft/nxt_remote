@@ -317,8 +317,6 @@
          
 }
 
-
-// Memory Leak fixen
 - (void)rfcommChannelData:(IOBluetoothRFCOMMChannel*)rfcommChannel data:(void *)dataPointer length:(size_t)dataLength
 {
 	int i = 0;
