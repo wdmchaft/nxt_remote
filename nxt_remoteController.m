@@ -208,6 +208,7 @@
 
 -(IBAction)getInputValues:(id)sender {
     UInt8 port;
+    port = 0;
     if ([sender tag] == 0) {
         port = kNXTSensor1;
         NSLog(@"Port 1");
