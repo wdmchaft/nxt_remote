@@ -87,7 +87,7 @@
             NSLog(@"%@",programNameTextField);
             
             if ([programNameTextField isEqualToString:@".rxe"]) {
-                // make foo
+                
             }
             
             else {
@@ -110,7 +110,6 @@
 }
 -(IBAction)playSound:(id)sender {
     
-    // stop Sound Button ohne loops
     Boolean loopB;
     if ([loopSound state] == YES) {
         loopB = YES;
@@ -132,7 +131,7 @@
         }
         
         if ([soundFile isEqualToString:@".rso"]) {
-            // make foo
+
         }
         else {
             
