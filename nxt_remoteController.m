@@ -38,7 +38,9 @@
 - (id)init
 {
     self = [super init];
+    if ( self ) {
     return self;
+    }
 }
 
 - (void)dealloc
@@ -66,6 +68,10 @@
 - (IBAction)close:(id)sender{
     [_nxt closeConnection];
     [deviceStatus setStringValue:@"Disconnected"];
+}
+
+- (IBAction)showExtraPanel:(id)sender{
+    
 }
 
 -(IBAction)startProgramm:(id)sender
