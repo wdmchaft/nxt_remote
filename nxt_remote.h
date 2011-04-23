@@ -244,7 +244,6 @@ enum {
 
 - (void)setDelegate:(id)delegate;
 
-- (BOOL)isConnected;
 - (void)alwaysCheckStatus:(BOOL)check;
 
 - (BOOL)connect:(id)delegate;

@@ -221,7 +221,7 @@
 - (void)close:(IOBluetoothDevice*)device
 {
 	int port;    
-	 connected = NO;
+    self.connected = NO;
  
 	for ( port = 0; port < 4; port++ )
 		[self invalidateSensorTimer:port];         
@@ -303,7 +303,7 @@
 
 - (void)rfcommChannelOpenComplete:(IOBluetoothRFCOMMChannel*)rfcommChannel status:(IOReturn)error
 {
-	connected = YES;
+	self.connected = YES;
     
 	[_delegate NXTDiscovered:self];
     
@@ -511,7 +511,7 @@
  
 - (void)startProgram:(NSString*)program
 {
-    if (connected) {
+    if (self.connected) {
         
 	char message[22] = {
 	kNXTRet,
@@ -530,7 +530,7 @@
 
 - (void)stopProgram
 {
-    if (connected) {
+    if (self.connected) {
         
 	// construct the message
 	char message[] = {
@@ -546,7 +546,7 @@
 
 - (void)getCurrentProgramName
 {
-    if (connected) {
+    if (self.connected) {
         
     // construct the message
 	char message[] = {
@@ -563,7 +563,7 @@
 
 - (void)playSoundFile:(NSString*)soundfile loop:(BOOL)loop
 {
-    if (connected) {
+    if (self.connected) {
     
     // construct the message
 	char message[23] = {
@@ -599,7 +599,7 @@
 
 - (void)stopSoundPlayback
 {
-    if (connected) {
+    if (self.connected) {
         
 	// construct the message
 	char message[] = {
@@ -648,7 +648,7 @@
 {
 	NXT_ASSERT_SENSOR_PORT(port);
  
-    if (connected) {
+    if (self.connected) {
         
 	// construct the message
 	char message[] = {
@@ -684,7 +684,7 @@
 {
 	NXT_ASSERT_SENSOR_PORT(port);
     
-    if (connected) {
+    if (self.connected) {
 
 	// construct the message
 	char message[] = {
@@ -758,7 +758,7 @@
 
 - (void)getBatteryLevel
 {
-    if (connected){
+    if (self.connected){
         
     
 	char message[] = {
