@@ -35,28 +35,32 @@
 
 @implementation nxt_remoteController
 
+- (id)initNXT{
+    self = [super init];
+    if (self) {
+        _nxt = [[NXT alloc] init];
+    }
+    return self;
+}
+
 - (id)init
 {
-    self = [super init];
-    if ( self ) {
-    return self;
-    }
+    return [self initNXT];
 }
+
 
 - (void)dealloc
 {
     [super dealloc];
 }
 
+
 - (IBAction)doConnect:(id)sender
 {
-    
     [deviceStatus setStringValue:(@"Connecting")];
-    _nxt = [[NXT alloc] init];
     
     BOOL connected;
     connected = [_nxt connect:self];
-    
     if (connected) {
         [deviceStatus setStringValue:(@"Connected to device")];
     }

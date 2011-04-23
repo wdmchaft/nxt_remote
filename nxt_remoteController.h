@@ -64,11 +64,14 @@
     IBOutlet NSButton* getInputValuesPort4;
 }
 
+- (id)initNXT;
+
 - (IBAction)startProgramm:(id)sender;
 - (IBAction)doConnect:(id)sender;
 - (IBAction)playSound:(id)sender;
 - (IBAction)getBatteryLevelC:(id)sender;
 - (IBAction)getInputValues:(id)sender;
+- (IBAction)showExtraPanel:(id)sender;
 
 - (void)setupInputValues:(UInt8)port;
 - (void)stopProgram;
