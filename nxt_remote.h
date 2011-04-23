@@ -221,7 +221,6 @@ enum {
 @interface NXT : NSObject {
     id _delegate;
 	
-    BOOL connected;
     BOOL checkStatus;
     
     NSTimer *sensorTimers[4];
@@ -237,8 +236,10 @@ enum {
     
 	IOBluetoothDevice *mBluetoothDevice;
 	IOBluetoothRFCOMMChannel *mRFCOMMChannel;
+
 }
 
+@property( readwrite ) Boolean connected;
 
 - (void)setDelegate:(id)delegate;
 

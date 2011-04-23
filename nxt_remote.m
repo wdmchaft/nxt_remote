@@ -57,6 +57,8 @@
  
 @implementation NXT
 
+@synthesize connected;
+
 - (UInt8)doReturn
 	{
 		if ( checkStatus )
@@ -195,7 +197,7 @@
 {    
 	int i;
      
-	connected = NO;
+	self.connected = NO;
 	checkStatus = NO;
  
 	for ( i = 0; i < 4; i++ )
@@ -220,7 +222,7 @@
 - (void)close:(IOBluetoothDevice*)device
 {
 	int port;    
-	connected = NO;
+	 connected = NO;
  
 	for ( port = 0; port < 4; port++ )
 		[self invalidateSensorTimer:port];         
@@ -288,7 +290,6 @@
 	mBluetoothDevice = device;
 	[mBluetoothDevice  retain];
 	[mRFCOMMChannel retain];
-    connected = YES;
     NSLog(@"Connected to device successfully");
 	return TRUE;
 }
