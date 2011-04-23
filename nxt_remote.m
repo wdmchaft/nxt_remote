@@ -476,6 +476,7 @@
 							
 							if ( [_delegate respondsToSelector:@selector(NXTLSRead:port:bytesRead:data:)] )
 								[_delegate NXTLSRead:self port:[self popLsReadQueue] bytesRead:bytesRead data:data];
+                                [data release];
 							}
 				
 						else if ( opCode == kNXTGetCurrentProgramName )
@@ -485,6 +486,7 @@
                                 
 							if ( [_delegate respondsToSelector:@selector(NXTCurrentProgramName:currentProgramName:)] )
 								[_delegate NXTCurrentProgramName:self currentProgramName:currentProgramName];
+                                [currentProgramName release];
 							}
 					else if ( opCode == kNXTMessageRead )
 						{
