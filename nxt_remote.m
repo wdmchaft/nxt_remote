@@ -58,6 +58,7 @@
 @implementation NXT
 
 @synthesize connected;
+@synthesize _delegate;
 
 - (UInt8)doReturn
 	{
@@ -66,9 +67,6 @@
 			return kNXTNoRet;
 	}
 
-- (void)setDelegate:(id)delegate{
-	_delegate = delegate;
-}
 
 - (void)alwaysCheckStatus:(BOOL)check
 {
@@ -243,7 +241,7 @@
 	NSArray							    *deviceArray;
 
 	NSLog( @"Attempting to connect" );
-	[self setDelegate:delegate];
+	self._delegate = delegate;
 	
 	// The device selector will provide UI to the end user to find a remote device
 	deviceSelector = [IOBluetoothDeviceSelectorController deviceSelector];
