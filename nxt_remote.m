@@ -195,11 +195,15 @@
 
 - (id)init
 {    
-	int i;
+    
+    self = [super init];
+    
+    if (self) {
      
 	self.connected = NO;
 	checkStatus = NO;
- 
+
+    int i;
 	for ( i = 0; i < 4; i++ )
 		sensorTimers[i] = nil;
     
@@ -208,7 +212,8 @@
 
 	lsGetStatusLock = [NSLock new];
 	lsReadLock = [NSLock new];
-       
+    }
+        
 	return self;
 }
 
