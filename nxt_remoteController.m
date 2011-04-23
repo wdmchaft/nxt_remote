@@ -59,9 +59,9 @@
 {
     [deviceStatus setStringValue:(@"Connecting")];
     
-    BOOL connected;
-    connected = [_nxt connect:self];
-    if (connected) {
+    BOOL nxtConnected;
+    nxtConnected = [_nxt connect:self];
+    if (nxtConnected) {
         [deviceStatus setStringValue:(@"Connected to device")];
     }
     else {

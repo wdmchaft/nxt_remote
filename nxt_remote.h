@@ -221,6 +221,7 @@ enum {
 @interface NXT : NSObject {
     id _delegate;
 	
+    BOOL connected;
     BOOL checkStatus;
     
     NSTimer *sensorTimers[4];
@@ -239,7 +240,7 @@ enum {
 
 }
 
-@property( readwrite ) Boolean connected;
+@property( readwrite ) BOOL connected;
 
 - (void)setDelegate:(id)delegate;
 

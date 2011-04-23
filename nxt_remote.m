@@ -70,12 +70,6 @@
 	_delegate = delegate;
 }
 
-- (BOOL)isConnected
-{
-	return connected;
-}
-
-
 - (void)alwaysCheckStatus:(BOOL)check
 {
 	checkStatus = check;
