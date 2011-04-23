@@ -239,7 +239,7 @@ enum {
 
 }
 
-@property( readwrite ) Boolean connected;
+@property( readwrite, copy) Boolean connected;
 
 - (void)setDelegate:(id)delegate;
 
