@@ -37,9 +37,10 @@ THE SOFTWARE.
 
 /*! Message Codes.  These codes specify message type and specify if the command requires a return value or acknowledgement. */
 enum {
-    kNXTRet   = 0x00, /*!< Command returns a value */
-    kNXTNoRet = 0x80, /*!< Command does not return a value */
-    kNXTSysOP = 0x01  /*!< Command is a system operation */
+    kNXTRet   = 0x00,       /*!< Command returns a value */
+    kNXTNoRet = 0x80,       /*!< Command does not return a value */
+    kNXTSysOP = 0x01,       /*!< Command is a system operation */
+    kNXTSysOPNoRet = 0x81   /*!< Command is a system operation, with no return */
 };
 
 
