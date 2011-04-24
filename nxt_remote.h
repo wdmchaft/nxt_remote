@@ -298,7 +298,7 @@ enum {
 @end
 
 
-/*! NXT Delegate Object. */
+/*! NXT Delegate category. */
 @interface NSObject( NXTDelegate )
 
 - (void)NXTDiscovered:(NXT*)nxt;
