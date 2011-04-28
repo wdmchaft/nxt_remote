@@ -78,7 +78,7 @@
     
 }
 
--(IBAction)startProgramm:(id)sender
+-(IBAction)startProgram:(id)sender
 {
     
     NSString* programNameTextField;
@@ -98,19 +98,24 @@
             
             if ([programNameTextField isEqualToString:@".rxe"]) {
                 
+                NSAlert *alert = [[NSAlert alloc] init];
+                [alert setMessageText:@"No program name specified"];
+                [alert setInformativeText:@"Please enter a program name, before starting the program"];
+                [alert runModal];
+                [alert release];
             }
             
             else {
                 
                 [_nxt startProgram:programNameTextField];
-                [sender setTitle:@"Stop programm"];
+                [sender setTitle:@"Stop program"];
                 programStarted = YES;
             }
             
         }
         else {
             [self stopProgram];
-            [sender setTitle:@"Start programm"];
+            [sender setTitle:@"Start program"];
             programStarted = NO;
     }
 }

@@ -64,10 +64,10 @@
 			children = (
 				FA44A76C132A7F45009EC667 /* nxt_remote.h */,
 				FA44A76D132A7F56009EC667 /* nxt_remote.m */,
-				256AC3D80F4B6AC300CF3369 /* nxt_remoteAppDelegate.h */,
-				256AC3D90F4B6AC300CF3369 /* nxt_remoteAppDelegate.m */,
 				FA1EC152132B918A006BCB70 /* nxt_remoteController.h */,
 				FA1EC153132B918A006BCB70 /* nxt_remoteController.m */,
+				256AC3D80F4B6AC300CF3369 /* nxt_remoteAppDelegate.h */,
+				256AC3D90F4B6AC300CF3369 /* nxt_remoteAppDelegate.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
