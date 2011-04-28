@@ -66,7 +66,7 @@
 
 - (id)initNXT;
 
-- (IBAction)startProgramm:(id)sender;
+- (IBAction)startProgram:(id)sender;
 - (IBAction)doConnect:(id)sender;
 - (IBAction)playSound:(id)sender;
 - (IBAction)getBatteryLevelC:(id)sender;

@@ -146,7 +146,11 @@
         }
         
         if ([soundFile isEqualToString:@".rso"]) {
-
+            NSAlert *alert = [[NSAlert alloc] init];
+            [alert setMessageText:@"No sound file name specified"];
+            [alert setInformativeText:@"Please enter a sound file name, before playing a sound"];
+            [alert runModal];
+            [alert release];
         }
         else {
             
