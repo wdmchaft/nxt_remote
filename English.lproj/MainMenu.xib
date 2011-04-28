@@ -1325,7 +1325,7 @@
 			<object class="NSWindowTemplate" id="972006081">
 				<int key="NSWindowStyleMask">15</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{335, 386}, {700, 467}}</string>
+				<string key="NSWindowRect">{{542, 519}, {700, 467}}</string>
 				<int key="NSWTFlags">1954021376</int>
 				<string key="NSWindowTitle">nxt_remote</string>
 				<string key="NSWindowClass">NSWindow</string>
@@ -1422,7 +1422,7 @@
 						<object class="NSButton" id="923374828">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{14, 391}, {139, 32}}</string>
+							<string key="NSFrame">{{14, 390}, {139, 32}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="240240723"/>
@@ -5851,7 +5851,7 @@
 							<string>getInputValues:</string>
 							<string>playSound:</string>
 							<string>showExtraPanel:</string>
-							<string>startProgramm:</string>
+							<string>startProgram:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -5872,7 +5872,7 @@
 							<string>getInputValues:</string>
 							<string>playSound:</string>
 							<string>showExtraPanel:</string>
-							<string>startProgramm:</string>
+							<string>startProgram:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -5897,7 +5897,7 @@
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
-								<string key="name">startProgramm:</string>
+								<string key="name">startProgram:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 						</object>
