@@ -312,9 +312,6 @@
 
 - (void)NXTGetFirmwareVersion:(NXT *)nxt minorVersionProtocol:(UInt8)minorVersionProtocol majorVersionProtocol:(UInt8)majorVersionProtocol minorVersionFirmware:(UInt8)minorVersionFirmware majorVersionFirmware:(UInt8)majorVersionFirmware{
     
-    NSLog(@"%i",majorVersionFirmware);
-    NSLog(@"%i",minorVersionFirmware);
-    
     NSString* protocolVersionS = [[NSString alloc] initWithFormat:@"%i",majorVersionProtocol];
     [protocolVersionS autorelease];
     protocolVersionS = [protocolVersionS stringByAppendingFormat:@".%i",minorVersionProtocol];
