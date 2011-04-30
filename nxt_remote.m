@@ -503,6 +503,24 @@
 								[_delegate NXTMessageRead:self message:message localInbox:localInbox];
 							
 						}
+                    else if ( opCode == kNXT_SYS_GET_FIRMWARE_VERSION )
+                    {
+                        UInt8 minorVersionProtocol;
+                        UInt8 majorVersionProtocol;
+                        UInt8 minorVersionFirmware;
+                        UInt8 majorVersionFirmware;
+                        
+                        memcpy(&minorVersionProtocol, dataPointer+i+0, 1); // 3
+                        memcpy(&majorVersionProtocol, dataPointer+i+1, 1); // 4
+                        memcpy(&minorVersionFirmware, dataPointer+i+2,  1); // 5
+                        memcpy(&majorVersionFirmware, dataPointer+i+3,  1); // 6
+                        i += 61;
+                        
+                        if ( [_delegate respondsToSelector:@selector(NXTGetFirmwareVersion:minorVersionProtocol:majorVersionProtocol:minorVersionFirmware:majorVersionFirmware:)] )
+                            [_delegate NXTGetFirmwareVersion:self minorVersionProtocol:minorVersionProtocol majorVersionProtocol:majorVersionProtocol minorVersionFirmware:minorVersionFirmware majorVersionFirmware:majorVersionFirmware];
+                        
+                    }
+
 					}
 			}
 }
@@ -990,6 +1008,20 @@
 			   turnRatio:0
 			   runState:kNXTMotorRunStateIdle
 			   tachoLimit:0];
+}
+
+- (void)getFirmwareVersion{
+    
+    if (self.connected) {
+        // construct the message
+        char message[] = {
+            kNXTSysOP,
+            kNXT_SYS_GET_FIRMWARE_VERSION 
+		};
+        
+        // send the message
+        [self sendMessage:message length:2];
+    }
 }
 
 @end

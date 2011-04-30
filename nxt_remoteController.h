@@ -49,6 +49,11 @@
     IBOutlet NSTextField* inputValues2;
     IBOutlet NSTextField* inputValues3;
     IBOutlet NSTextField* inputValues4;
+    IBOutlet NSTextField* protocolVersion;
+    IBOutlet NSTextField* firmwareVersion;
+    
+    IBOutlet NSWindow* selectWindow;
+    IBOutlet NSWindow* mainWindow;
     
     IBOutlet NSLevelIndicator* batterylevelIndicator;
     
@@ -64,6 +69,9 @@
     IBOutlet NSButton* getInputValuesPort4;
 }
 
+- (IBAction)showSelectSheet:(id)sender;
+- (IBAction)endSelectSheet:(id)sender;
+
 - (id)initNXT;
 
 - (IBAction)startProgram:(id)sender;
@@ -71,7 +79,7 @@
 - (IBAction)playSound:(id)sender;
 - (IBAction)getBatteryLevelC:(id)sender;
 - (IBAction)getInputValues:(id)sender;
-- (IBAction)showExtraPanel:(id)sender;
+- (IBAction)getFirmwareVersion:(id)sender;
 
 - (void)setupInputValues:(UInt8)port;
 - (void)stopProgram;

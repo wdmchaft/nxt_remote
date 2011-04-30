@@ -54,6 +54,9 @@
     [super dealloc];
 }
 
+- (void)awakeFromNib{
+    
+}
 
 - (IBAction)doConnect:(id)sender
 {
@@ -74,8 +77,8 @@
     [deviceStatus setStringValue:@"Disconnected"];
 }
 
-- (IBAction)showExtraPanel:(id)sender{
-    
+- (IBAction)getFirmwareVersion:(id)sender{
+    [_nxt getFirmwareVersion];
 }
 
 -(IBAction)startProgram:(id)sender
@@ -295,14 +298,42 @@
 - (void)NXTOperationError:(NXT*)nxt operation:(UInt8)operation status:(UInt8)status
     {
         NSString* errorMessage;
+        [errorMessage autorelease];
         NSLog(@"nxt error: operation=0x%x status=0x%x", operation, status);
         errorMessage = [NSString stringWithFormat:@"0x%x",status];
         [errorField setStringValue:errorMessage];
    }
 
 // disconnected
-- (void) NXTClosed:(NXT*)nxt
+- (void)NXTClosed:(NXT*)nxt
 {
     [deviceStatus setStringValue:@"Disconnected"];
 }
+
+- (void)NXTGetFirmwareVersion:(NXT *)nxt minorVersionProtocol:(UInt8)minorVersionProtocol majorVersionProtocol:(UInt8)majorVersionProtocol minorVersionFirmware:(UInt8)minorVersionFirmware majorVersionFirmware:(UInt8)majorVersionFirmware{
+    
+    NSLog(@"%i",majorVersionFirmware);
+    NSLog(@"%i",minorVersionFirmware);
+    
+    NSString* protocolVersionS = [[NSString alloc] initWithFormat:@"%i",majorVersionProtocol];
+    [protocolVersionS autorelease];
+    protocolVersionS = [protocolVersionS stringByAppendingFormat:@".%i",minorVersionProtocol];
+    [protocolVersion setStringValue:protocolVersionS];
+    
+    NSString* firmwareVersionS = [[NSString alloc] initWithFormat:@"%i",majorVersionFirmware];
+    [firmwareVersionS autorelease];
+    firmwareVersionS = [firmwareVersionS stringByAppendingFormat:@".%i",minorVersionFirmware];
+    [firmwareVersion setStringValue:firmwareVersionS];
+}
+
+- (IBAction)showSelectSheet:(id)sender{
+    [NSApp beginSheet:selectWindow modalForWindow:mainWindow modalDelegate:nil didEndSelector:NULL contextInfo:NULL];
+}
+
+- (IBAction)endSelectSheet:(id)sender{
+    [self doConnect:sender];
+    [NSApp endSheet:selectWindow];
+    [selectWindow orderOut:sender];
+}
+
 @end

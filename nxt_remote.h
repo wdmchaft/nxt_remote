@@ -292,6 +292,8 @@ enum {
 - (void)stopServos;
 - (void)closeConnection;
 
+-(void)getFirmwareVersion;
+
 // Bluetooth delegates
 - (void)close:(IOBluetoothDevice*)device;
 //@}
@@ -329,4 +331,7 @@ enum {
 - (void)NXTLSRead:(NXT*)nxt port:(UInt8)port bytesRead:(UInt8)bytesRead data:(NSData*)data;
 
 - (void)NXTMessageRead:(NXT*)nxt message:(NSData*)message localInbox:(UInt8)localInbox;
+
+- (void)NXTGetFirmwareVersion:(NXT*)nxt minorVersionProtocol:(UInt8)minorVersionProtocol majorVersionProtocol:(UInt8)majorVersionProtocol minorVersionFirmware:(UInt8)minorVersionFirmware majorVersionFirmware:(UInt8)majorVersionFirmware;
+
 @end
