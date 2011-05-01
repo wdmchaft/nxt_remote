@@ -54,10 +54,6 @@
     [super dealloc];
 }
 
-- (void)awakeFromNib{
-    
-}
-
 - (IBAction)doConnect:(id)sender
 {
     [deviceStatus setStringValue:(@"Connecting")];
