@@ -318,6 +318,10 @@
     [firmwareVersion setStringValue:firmwareVersionS];
 }
 
+- (void)NXTSysGetDeviceInfo:(NXT *)nxt nxtName:(NSString *)nxtName{
+    [deviceName setStringValue:nxtName];
+}
+
 - (IBAction)showSelectSheet:(id)sender{
     [NSApp beginSheet:selectWindow modalForWindow:mainWindow modalDelegate:nil didEndSelector:NULL contextInfo:NULL];
 }

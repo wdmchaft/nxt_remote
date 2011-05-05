@@ -50,27 +50,22 @@ enum {
     kNXTStopProgram           = 0x01, /*!< Stop Program Op Code */
     kNXTPlaySoundFile         = 0x02, /*!< Play Sound File Op Code */
     kNXTPlayTone              = 0x03, /*!< */
-    kNXTSetOutputState        = 0x04, /*!< Set Output State Op Code */
+    kNXTSetOutputState        = 0x04, /*!< */
     kNXTSetInputMode          = 0x05, /*!< Set Input Mode Op Code*/
     kNXTGetOutputState        = 0x06, /*!< */
     kNXTGetInputValues        = 0x07, /*!< Get Input Mode Op Code*/
     kNXTResetScaledInputValue = 0x08, /*!< */
     kNXTMessageWrite          = 0x09, /*!< */
     kNXTResetMotorPosition    = 0x0A, /*!< */
-    kNXTGetBatteryLevel       = 0x0B, /*!< Get Battery Level Op Code*/
-    kNXTStopSoundPlayback     = 0x0C, /*!< Stop Sound Playback Op Code*/
+    kNXTGetBatteryLevel       = 0x0B, /*!< Get Battery Level Op Code */
+    kNXTStopSoundPlayback     = 0x0C, /*!< Stop Sound Playback Op Code */
     kNXTKeepAlive             = 0x0D, /*!< */
     kNXTLSGetStatus           = 0x0E, /*!< */
     kNXTLSWrite               = 0x0F, /*!< */
     kNXTLSRead                = 0x10, /*!< */
-    kNXTGetCurrentProgramName = 0x11, /*!< Get Current Program Name Op Code*/
+    kNXTGetCurrentProgramName = 0x11, /*!< Get Current Program Name Op Code */
     kNXTMessageRead           = 0x13  /*!< */
 };
-
-typedef enum knownErrors{ // These errors are reported by the NXT, but are not specified by the API
-    kNXTErrorAtGDI = 0x68,
-    kNXTErrorAtGDI2 = 0x6
-}knownErrors;
 
 /*! Port Specifiers.  These enums specify sensor or motor ports. */
 enum {
@@ -186,9 +181,6 @@ enum {
     kNXTBadArguments            = 0xFF  /*!< */
 };
 
-
-
-
  enum {
  kNXT_SYS_OPEN_READ                = 0x80,
  kNXT_SYS_OPEN_WRITE               = 0x81,
@@ -198,7 +190,7 @@ enum {
  kNXT_SYS_DELETE                   = 0x85,
  kNXT_SYS_FIND_FIRST               = 0x86,
  kNXT_SYS_FIND_NEXT                = 0x87,
- kNXT_SYS_GET_FIRMWARE_VERSION     = 0x88,
+ kNXT_SYS_GET_FIRMWARE_VERSION     = 0x88, /*!< Get FirmwareVersion OpCode */
  kNXT_SYS_OPEN_WRITE_LINEAR        = 0x89,
  kNXT_SYS_OPEN_READ_LINEAR         = 0x8A,
  kNXT_SYS_OPEN_WRITE_DATA          = 0x8B,
@@ -310,33 +302,22 @@ enum {
 @interface NSObject( NXTDelegate )
 
 - (void)NXTDiscovered:(NXT*)nxt;
-
 - (void)NXTClosed:(NXT*)nxt;
-
 - (void)NXTCommunicationError:(NXT*)nxt code:(int)code;
-
 - (void)NXTOperationError:(NXT*)nxt operation:(UInt8)operation status:(UInt8)status;
-
 - (void)NXTGetInputValues:(NXT*)nxt port:(UInt8)port isCalibrated:(BOOL)isCalibrated type:(UInt8)type mode:(UInt8)mode
                  rawValue:(UInt16)rawValue normalizedValue:(UInt16)normalizedValue
               scaledValue:(SInt16)scaledValue calibratedValue:(SInt16)calibratedValue;
-
 - (void)NXTGetOutputState:(NXT*)nxt port:(UInt8)port power:(SInt8)power mode:(UInt8)mode regulationMode:(UInt8)regulationMode
                 turnRatio:(SInt8)turnRatio runState:(UInt8)runState tachoLimit:(UInt32)tachoLimit tachoCount:(SInt32)tachoCount
           blockTachoCount:(SInt32)blockTachoCount rotationCount:(SInt32)rotationCount;
-
 - (void)NXTBatteryLevel:(NXT*)nxt batteryLevel:(UInt16)batteryLevel;
-
 - (void)NXTSleepTime:(NXT*)nxt sleepTime:(UInt32)sleepTime;
-
 - (void)NXTCurrentProgramName:(NXT*)nxt currentProgramName:(NSString*)currentProgramName;
-
 - (void)NXTLSGetStatus:(NXT*)nxt port:(UInt8)port bytesReady:(UInt8)bytesReady;
-
 - (void)NXTLSRead:(NXT*)nxt port:(UInt8)port bytesRead:(UInt8)bytesRead data:(NSData*)data;
-
 - (void)NXTMessageRead:(NXT*)nxt message:(NSData*)message localInbox:(UInt8)localInbox;
-
 - (void)NXTGetFirmwareVersion:(NXT*)nxt minorVersionProtocol:(UInt8)minorVersionProtocol majorVersionProtocol:(UInt8)majorVersionProtocol minorVersionFirmware:(UInt8)minorVersionFirmware majorVersionFirmware:(UInt8)majorVersionFirmware;
+- (void)NXTSysGetDeviceInfo:(NXT*)nxt nxtName:(NSString*)nxtName;
 
 @end

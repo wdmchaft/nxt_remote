@@ -51,6 +51,7 @@
     IBOutlet NSTextField* inputValues4;
     IBOutlet NSTextField* protocolVersion;
     IBOutlet NSTextField* firmwareVersion;
+    IBOutlet NSTextField* deviceName;
     
     IBOutlet NSWindow* selectWindow;
     IBOutlet NSWindow* mainWindow;

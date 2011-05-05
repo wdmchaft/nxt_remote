@@ -338,12 +338,8 @@
 			i += 3;
         
 			// report error status
-			if ( status != kNXTSuccess && [_delegate respondsToSelector:@selector(NXTOperationError:operation:status:)] )
-                if (opCode != kNXTErrorAtGDI2 && opCode != kNXTErrorAtGDI   ){
+			if ( status != kNXTSuccess && [_delegate respondsToSelector:@selector(NXTOperationError:operation:status:)] ) {
                     [_delegate NXTOperationError:self operation:opCode status:status];
-                }
-                else {
-                    continue;
                 }
 			else {
 					if ( opCode == kNXTGetOutputState )
@@ -402,15 +398,15 @@
 							SInt16 scaledValue;
 							SInt16 calibratedValue;
           
-							memcpy(&port, dataPointer+i+0,  1); // 3 bit
-							memcpy(&valid,              dataPointer+i+1,  1); // 4 bit
-							memcpy(&isCalibrated,       dataPointer+i+2,  1); // 5 bit
-							memcpy(&sensorType,         dataPointer+i+3,  1); // 6 bit
-							memcpy(&sensorMode,         dataPointer+i+4,  1); // 7 bit
-							memcpy(&rawValue,           dataPointer+i+5,  2); // 8 bit
-							memcpy(&normalizedValue,    dataPointer+i+7,  2); // 10 bit
-							memcpy(&scaledValue,        dataPointer+i+9,  2); // 12 bit
-							memcpy(&calibratedValue,    dataPointer+i+11, 2); // 14 bit
+							memcpy(&port, dataPointer+i+0,  1); // 3 byte
+							memcpy(&valid,              dataPointer+i+1,  1); // 4 byte
+							memcpy(&isCalibrated,       dataPointer+i+2,  1); // 5 byte
+							memcpy(&sensorType,         dataPointer+i+3,  1); // 6 byte
+							memcpy(&sensorMode,         dataPointer+i+4,  1); // 7 byte
+							memcpy(&rawValue,           dataPointer+i+5,  2); // 8 byte
+							memcpy(&normalizedValue,    dataPointer+i+7,  2); // 10 byte
+							memcpy(&scaledValue,        dataPointer+i+9,  2); // 12 byte
+							memcpy(&calibratedValue,    dataPointer+i+11, 2); // 14 byte
 							
 							i += 12;
          
@@ -523,7 +519,17 @@
                         if ( [_delegate respondsToSelector:@selector(NXTGetFirmwareVersion:minorVersionProtocol:majorVersionProtocol:minorVersionFirmware:majorVersionFirmware:)] )
                             [_delegate NXTGetFirmwareVersion:self minorVersionProtocol:minorVersionProtocol majorVersionProtocol:majorVersionProtocol minorVersionFirmware:minorVersionFirmware majorVersionFirmware:majorVersionFirmware];
                         
-                    }
+                    } 
+                    else if (opCode == kNXT_SYS_GET_DEVICE_INFO) {
+                        NSString *deviceName = [[NSString stringWithCString:(dataPointer+i) encoding:NSASCIIStringEncoding] retain]; // 3-17
+                        i += 20;
+                        
+                        if ( [_delegate respondsToSelector:@selector(NXTSysGetDeviceInfo:nxtName:)] ) {
+                            [_delegate NXTSysGetDeviceInfo:self nxtName:deviceName];
+                            
+                            }
+                        [deviceName release];
+                        }
 
 					}
 			}
