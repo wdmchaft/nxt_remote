@@ -339,10 +339,12 @@
         
 			// report error status
 			if ( status != kNXTSuccess && [_delegate respondsToSelector:@selector(NXTOperationError:operation:status:)] )
-                if (opCode != kNXTErrorAtGDI2){
-				[_delegate NXTOperationError:self operation:opCode status:status];
+                if (opCode != kNXTErrorAtGDI2 && opCode != kNXTErrorAtGDI   ){
+                    [_delegate NXTOperationError:self operation:opCode status:status];
                 }
-			
+                else {
+                    continue;
+                }
 			else {
 					if ( opCode == kNXTGetOutputState )
 						{

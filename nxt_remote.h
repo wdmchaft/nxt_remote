@@ -67,8 +67,8 @@ enum {
     kNXTMessageRead           = 0x13  /*!< */
 };
 
-typedef enum knownErrors{
-    kNXTErrorAtGDI = 0x68, 
+typedef enum knownErrors{ // These errors are reported by the NXT, but are not specified by the API
+    kNXTErrorAtGDI = 0x68,
     kNXTErrorAtGDI2 = 0x6
 }knownErrors;
 
