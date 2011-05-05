@@ -80,6 +80,7 @@
 - (IBAction)getBatteryLevelC:(id)sender;
 - (IBAction)getInputValues:(id)sender;
 - (IBAction)getFirmwareVersion:(id)sender;
+- (IBAction)getDeviceInfo:(id)sender;
 
 - (void)setupInputValues:(UInt8)port;
 - (void)stopProgram;

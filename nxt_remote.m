@@ -339,7 +339,9 @@
         
 			// report error status
 			if ( status != kNXTSuccess && [_delegate respondsToSelector:@selector(NXTOperationError:operation:status:)] )
+                if (opCode != kNXTErrorAtGDI2){
 				[_delegate NXTOperationError:self operation:opCode status:status];
+                }
 			
 			else {
 					if ( opCode == kNXTGetOutputState )
@@ -1017,6 +1019,20 @@
         char message[] = {
             kNXTSysOP,
             kNXT_SYS_GET_FIRMWARE_VERSION 
+		};
+        
+        // send the message
+        [self sendMessage:message length:2];
+    }
+}
+
+- (void)getDeviceInfo{
+    
+    if (self.connected) {
+        // construct the message
+        char message[] = {
+            kNXTSysOP,
+            kNXT_SYS_GET_DEVICE_INFO
 		};
         
         // send the message

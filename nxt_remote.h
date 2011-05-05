@@ -67,6 +67,10 @@ enum {
     kNXTMessageRead           = 0x13  /*!< */
 };
 
+typedef enum knownErrors{
+    kNXTErrorAtGDI = 0x68, 
+    kNXTErrorAtGDI2 = 0x6
+}knownErrors;
 
 /*! Port Specifiers.  These enums specify sensor or motor ports. */
 enum {
@@ -116,9 +120,9 @@ enum {
     kNXTReflection          = 0x03, /*!< */
     kNXTAngle               = 0x04, /*!< */
     kNXTLightActive         = 0x05, /*!< LightSensor Active */
-    kNXTLightInactive       = 0x06, /*!< LightSensor Passiv*/
-    kNXTSoundDB             = 0x07, /*!< SoundSensor Unadjusted*/
-    kNXTSoundDBA            = 0x08, /*!< SoundSensor Adjusted*/
+    kNXTLightInactive       = 0x06, /*!< LightSensor Passiv */
+    kNXTSoundDB             = 0x07, /*!< SoundSensor Unadjusted */
+    kNXTSoundDBA            = 0x08, /*!< SoundSensor Adjusted */
     kNXTCustom              = 0x09, /*!< */
     kNXTLowSpeed            = 0x0A, /*!< */
     kNXTLowSpeed9V          = 0x0B, /*!< */
@@ -128,11 +132,11 @@ enum {
 
 /*! Sensor Modes.  These modes control sensor operation. */
 enum {
-    kNXTRawMode             = 0x00, /*!< 0 - 1023*/
-    kNXTBooleanMode         = 0x20, /*!< True / False*/
+    kNXTRawMode             = 0x00, /*!< 0 - 1023 */
+    kNXTBooleanMode         = 0x20, /*!< True / False */
     kNXTTransitionCntMode   = 0x40, /*!< */
     kNXTPeriodCounterMode   = 0x60, /*!< */
-    kNXTPCTFullScaleMode    = 0x80, /*!< 0 - 100*/
+    kNXTPCTFullScaleMode    = 0x80, /*!< 0 - 100 */
     kNXTCelciusMode         = 0xA0, /*!< */
     kNXTFahrenheitMode      = 0xC0, /*!< */
     kNXTAngleStepsMode      = 0xE0, /*!< */
@@ -143,7 +147,7 @@ enum {
 
 /*! Command Return Values.  Success and error codes returned by commands. */
 enum {
-    kNXTSuccess                 = 0x00, /*!< Success*/
+    kNXTSuccess                 = 0x00, /*!< Success */
     kNXTPendingCommunication    = 0x20, /*!< */
     kNXTMailboxEmpty            = 0x40, /*!< */
     kNXTNoMoreHandles           = 0x81, /*!< */
@@ -292,7 +296,8 @@ enum {
 - (void)stopServos;
 - (void)closeConnection;
 
--(void)getFirmwareVersion;
+- (void)getFirmwareVersion;
+- (void)getDeviceInfo;
 
 // Bluetooth delegates
 - (void)close:(IOBluetoothDevice*)device;

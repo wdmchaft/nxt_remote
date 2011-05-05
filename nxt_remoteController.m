@@ -294,7 +294,6 @@
 - (void)NXTOperationError:(NXT*)nxt operation:(UInt8)operation status:(UInt8)status
     {
         NSString* errorMessage;
-        [errorMessage autorelease];
         NSLog(@"nxt error: operation=0x%x status=0x%x", operation, status);
         errorMessage = [NSString stringWithFormat:@"0x%x",status];
         [errorField setStringValue:errorMessage];
@@ -327,6 +326,10 @@
     [self doConnect:sender];
     [NSApp endSheet:selectWindow];
     [selectWindow orderOut:sender];
+}
+
+- (IBAction)getDeviceInfo:(id)sender{
+    [_nxt getDeviceInfo];
 }
 
 @end
