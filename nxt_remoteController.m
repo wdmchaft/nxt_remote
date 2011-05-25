@@ -248,7 +248,10 @@
 
 - (void)NXTBatteryLevel:(NXT*)nxt batteryLevel:(UInt16)batteryLevel
 {
-    NSLog(@"%i",batteryLevel);
+    NSString* batteryLevelString;
+    batteryLevelString = [NSString stringWithFormat:@"%i",batteryLevel];
+    batteryLevelString = [batteryLevelString stringByAppendingFormat:@" milivolts"];
+    [batteryLevelTextField setStringValue:batteryLevelString];
     [batterylevelIndicator setIntValue:batteryLevel];
 }
 
