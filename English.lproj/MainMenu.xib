@@ -2568,7 +2568,7 @@
 						<object class="NSTextField" id="235979241">
 							<reference key="NSNextResponder" ref="433815804"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{28, 396}, {88, 17}}</string>
+							<string key="NSFrame">{{28, 396}, {119, 17}}</string>
 							<reference key="NSSuperview" ref="433815804"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="947257032"/>
@@ -2586,7 +2586,7 @@
 						<object class="NSButton" id="1005318465">
 							<reference key="NSNextResponder" ref="433815804"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{25, 309}, {146, 32}}</string>
+							<string key="NSFrame">{{25, 308}, {146, 32}}</string>
 							<reference key="NSSuperview" ref="433815804"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="783697295"/>
@@ -2608,7 +2608,7 @@
 						<object class="NSTextField" id="947257032">
 							<reference key="NSNextResponder" ref="433815804"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{28, 371}, {88, 17}}</string>
+							<string key="NSFrame">{{28, 371}, {119, 17}}</string>
 							<reference key="NSSuperview" ref="433815804"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="441532134"/>
@@ -2628,9 +2628,10 @@
 						<object class="NSButton" id="315868375">
 							<reference key="NSNextResponder" ref="433815804"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{515, 265}, {171, 32}}</string>
+							<string key="NSFrame">{{511, 265}, {171, 32}}</string>
 							<reference key="NSSuperview" ref="433815804"/>
 							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="130847268">
 								<int key="NSCellFlags">67239424</int>
@@ -5530,17 +5531,17 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="235979241"/>
-							<reference ref="441532134"/>
-							<reference ref="1005318465"/>
-							<reference ref="947257032"/>
 							<reference ref="783697295"/>
-							<reference ref="315868375"/>
 							<reference ref="753326328"/>
 							<reference ref="478399774"/>
 							<reference ref="476831812"/>
-							<reference ref="260068456"/>
-							<reference ref="247486226"/>
 							<reference ref="714195361"/>
+							<reference ref="247486226"/>
+							<reference ref="947257032"/>
+							<reference ref="441532134"/>
+							<reference ref="1005318465"/>
+							<reference ref="260068456"/>
+							<reference ref="315868375"/>
 						</object>
 						<reference key="parent" ref="178223533"/>
 					</object>
@@ -6433,7 +6434,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">991</int>
+			<int key="maxID">994</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
