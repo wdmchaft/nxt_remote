@@ -40,6 +40,7 @@
     if (self) {
         _nxt = [[NXT alloc] init];
     }
+    
     return self;
 }
 
@@ -321,8 +322,9 @@
     [firmwareVersion setStringValue:firmwareVersionS];
 }
 
-- (void)NXTSysGetDeviceInfo:(NXT *)nxt nxtName:(NSString *)nxtName{
+- (void)NXTSysGetDeviceInfo:(NXT *)nxt nxtName:(NSString *)nxtName btadress:(NSString *)btadress{
     [deviceName setStringValue:nxtName];
+    [btadressField setStringValue:btadress];
 }
 
 - (IBAction)showSelectSheet:(id)sender{
@@ -339,4 +341,8 @@
     [_nxt getDeviceInfo];
 }
 
+- (IBAction)setOutputState:(id)sender{
+    [_nxt setOutputState:kNXTMotorAll power:0 mode:kNXTCoast regulationMode:kNXTRegulationModeIdle turnRatio:0 runState:kNXTMotorRunStateIdle tachoLimit:0];
+    [_nxt moveServo:kNXTMotorA power:100 tacholimit:0];
+}
 @end

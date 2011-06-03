@@ -317,6 +317,7 @@
 
 - (void)rfcommChannelData:(IOBluetoothRFCOMMChannel*)rfcommChannel data:(void *)dataPointer length:(size_t)dataLength
 {
+    
 	int i = 0;
   
 	[self dumpMessage:dataPointer length:dataLength prefix:@"<- "];
@@ -521,13 +522,23 @@
                         
                     } 
                     else if (opCode == kNXT_SYS_GET_DEVICE_INFO) {
+                        
                         NSString *deviceName = [[NSString stringWithCString:(dataPointer+i) encoding:NSASCIIStringEncoding] retain]; // 3-17
+                        
+                        NSString* bta = [NSString string];
+                        bta = [bta stringByAppendingString:[NSString stringWithFormat:@"%x", *((unsigned char *)dataPointer+i+15)]];
+                        bta = [bta stringByAppendingString:[NSString stringWithFormat:@"-%x", *((unsigned char *)dataPointer+i+16)]];
+                        bta = [bta stringByAppendingString:[NSString stringWithFormat:@"-%x", *((unsigned char *)dataPointer+i+17)]];
+                        bta = [bta stringByAppendingString:[NSString stringWithFormat:@"-%x", *((unsigned char *)dataPointer+i+18)]];
+                        bta = [bta stringByAppendingString:[NSString stringWithFormat:@"-%x", *((unsigned char *)dataPointer+i+19)]];
+                        bta = [bta stringByAppendingString:[NSString stringWithFormat:@"-%x", *((unsigned char *)dataPointer+i+20)]];
+                        
                         i += 20;
                         
-                        if ( [_delegate respondsToSelector:@selector(NXTSysGetDeviceInfo:nxtName:)] ) {
-                            [_delegate NXTSysGetDeviceInfo:self nxtName:deviceName];
+                        if ( [_delegate respondsToSelector:@selector(NXTSysGetDeviceInfo:nxtName:btadress:)] ) {
+                            [_delegate NXTSysGetDeviceInfo:self nxtName:deviceName btadress:bta];
                             
-                            }
+                        }
                         [deviceName release];
                         }
 
@@ -650,26 +661,31 @@
 				runState:(UInt8)runState
 				tachoLimit:(UInt32)tachoLimit
 {
-	NXT_ASSERT_MOTOR_PORT(port);
+
+    if (self.connected){
+        
+        NXT_ASSERT_MOTOR_PORT(port);
   
-	// construct the message
-	char message[] = {
-		[self doReturn],
-		kNXTSetOutputState,
-			port,
-			power,
-			mode,
-			regulationMode,
-			turnRatio,
-			runState,
-			(tachoLimit & 0x000000ff),
-			(tachoLimit & 0x0000ff00) >> 8,
-			(tachoLimit & 0x00ff0000) >> 16,
-			(tachoLimit & 0xff000000) >> 24
-		};
+        // construct the message
+        char message[] = {
+            [self doReturn],
+            kNXTSetOutputState,
+                port,
+                power,
+                mode,
+                regulationMode,
+                turnRatio,
+                runState,
+                (tachoLimit & 0x000000ff),
+                (tachoLimit & 0x0000ff00) >> 8,
+                (tachoLimit & 0x00ff0000) >> 16,
+                (tachoLimit & 0xff000000) >> 24
+            };
     
-	// send the message
-	[self sendMessage:message length:12];
+        // send the message
+        [self sendMessage:message length:12];
+        
+    }
 }
 
 - (void)setInputMode:(UInt8)port type:(UInt8)type mode:(UInt8)mode
@@ -998,15 +1014,18 @@
  
 - (void)moveServo:(UInt8)port power:(SInt8)power tacholimit:(UInt32)tacholimit
 {
+    if (self.connected) {
+    
 	NXT_ASSERT_MOTOR_PORT(port);
    
 	[self setOutputState:port
 			   power:power
-			   mode:(kNXTMotorOn | kNXTRegulated)
+			   mode:(kNXTMotorOn | kNXTRegulated | kNXTBrake)
 			   regulationMode:kNXTRegulationModeMotorSpeed
 			   turnRatio:0
 			   runState:kNXTMotorRunStateRunning
 			   tachoLimit:tacholimit];
+    }
 }
 
 - (void)stopServos

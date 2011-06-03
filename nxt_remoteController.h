@@ -52,10 +52,12 @@
     IBOutlet NSTextField* protocolVersion;
     IBOutlet NSTextField* firmwareVersion;
     IBOutlet NSTextField* deviceName;
+    IBOutlet NSTextField* btadressField;
     IBOutlet NSTextField* batteryLevelTextField;
     
     IBOutlet NSWindow* selectWindow;
     IBOutlet NSWindow* mainWindow;
+    IBOutlet NSWindow* deviceInfoWindow;
     
     IBOutlet NSLevelIndicator* batterylevelIndicator;
     
@@ -69,6 +71,7 @@
     IBOutlet NSButton* getInputValuesPort2;
     IBOutlet NSButton* getInputValuesPort3;
     IBOutlet NSButton* getInputValuesPort4;
+    IBOutlet NSButton* setOutputState;
 }
 
 - (IBAction)showSelectSheet:(id)sender;
@@ -83,6 +86,7 @@
 - (IBAction)getInputValues:(id)sender;
 - (IBAction)getFirmwareVersion:(id)sender;
 - (IBAction)getDeviceInfo:(id)sender;
+- (IBAction)setOutputState:(id)sender;
 
 - (void)setupInputValues:(UInt8)port;
 - (void)stopProgram;
