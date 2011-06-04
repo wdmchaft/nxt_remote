@@ -527,11 +527,44 @@
                         
                         NSString* bta = [NSString string];
                         bta = [bta stringByAppendingString:[NSString stringWithFormat:@"%x", *((unsigned char *)dataPointer+i+15)]];
+                        if ([bta length] == 1){
+                            bta = [@"0" stringByAppendingString:@"0"];
+                        }
                         bta = [bta stringByAppendingString:[NSString stringWithFormat:@"-%x", *((unsigned char *)dataPointer+i+16)]];
+                        if ([bta length] == 4){
+                            NSString* sub1 = [bta substringToIndex:3];
+                            NSString* sub2 = [bta substringFromIndex:3];
+                            bta = [sub1 stringByAppendingString:@"0"];
+                            bta = [bta stringByAppendingString:sub2];
+                        }
                         bta = [bta stringByAppendingString:[NSString stringWithFormat:@"-%x", *((unsigned char *)dataPointer+i+17)]];
+                        if ([bta length] == 7){
+                            NSString* sub1 = [bta substringToIndex:6];
+                            NSString* sub2 = [bta substringFromIndex:6];
+                            bta = [sub1 stringByAppendingString:@"0"];
+                            bta = [bta stringByAppendingString:sub2];
+                        }
                         bta = [bta stringByAppendingString:[NSString stringWithFormat:@"-%x", *((unsigned char *)dataPointer+i+18)]];
+                        if ([bta length] == 10){
+                            NSString* sub1 = [bta substringToIndex:9];
+                            NSString* sub2 = [bta substringFromIndex:9];
+                            bta = [sub1 stringByAppendingString:@"0"];
+                            bta = [bta stringByAppendingString:sub2];
+                        }
                         bta = [bta stringByAppendingString:[NSString stringWithFormat:@"-%x", *((unsigned char *)dataPointer+i+19)]];
+                        if ([bta length] == 13){
+                            NSString* sub1 = [bta substringToIndex:12];
+                            NSString* sub2 = [bta substringFromIndex:12];
+                            bta = [sub1 stringByAppendingString:@"0"];
+                            bta = [bta stringByAppendingString:sub2];
+                        }
                         bta = [bta stringByAppendingString:[NSString stringWithFormat:@"-%x", *((unsigned char *)dataPointer+i+20)]];
+                        if ([bta length] == 16){
+                            NSString* sub1 = [bta substringToIndex:15];
+                            NSString* sub2 = [bta substringFromIndex:15];
+                            bta = [sub1 stringByAppendingString:@"0"];
+                            bta = [bta stringByAppendingString:sub2];
+                        }
                         
                         i += 20;
                         
