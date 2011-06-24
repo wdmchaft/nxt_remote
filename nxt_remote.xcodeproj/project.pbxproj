@@ -20,6 +20,7 @@
 		FA455EB0132D4CAD0006095F /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = FA455EAF132D4CAD0006095F /* icon.icns */; };
 		FA81AD09136DB768002AD53A /* nxt.png in Resources */ = {isa = PBXBuildFile; fileRef = FA81AD08136DB768002AD53A /* nxt.png */; };
 		FA978E871355CEE300EBBACE /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = FA978E861355CEE300EBBACE /* LICENSE */; };
+		FADCF5ED13A66A9E00AA3E80 /* ServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FADCF5EC13A66A9E00AA3E80 /* ServerController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,8 @@
 		FA455EAF132D4CAD0006095F /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		FA81AD08136DB768002AD53A /* nxt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nxt.png; sourceTree = "<group>"; };
 		FA978E861355CEE300EBBACE /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		FADCF5EB13A66A9E00AA3E80 /* ServerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerController.h; sourceTree = "<group>"; };
+		FADCF5EC13A66A9E00AA3E80 /* ServerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FADCF5EB13A66A9E00AA3E80 /* ServerController.h */,
+				FADCF5EC13A66A9E00AA3E80 /* ServerController.m */,
 				FA44A76C132A7F45009EC667 /* nxt_remote.h */,
 				FA44A76D132A7F56009EC667 /* nxt_remote.m */,
 				FA1EC152132B918A006BCB70 /* nxt_remoteController.h */,
@@ -219,6 +224,7 @@
 				256AC3DA0F4B6AC300CF3369 /* nxt_remoteAppDelegate.m in Sources */,
 				FA44A76E132A7F56009EC667 /* nxt_remote.m in Sources */,
 				FA1EC154132B918A006BCB70 /* nxt_remoteController.m in Sources */,
+				FADCF5ED13A66A9E00AA3E80 /* ServerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
