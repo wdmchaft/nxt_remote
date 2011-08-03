@@ -32,6 +32,7 @@
 
 #import <Foundation/Foundation.h>
 #import "nxt_remote.h"
+#import "ServerController.h"
 
 
 @interface nxt_remoteController : NSObject {
@@ -92,5 +93,6 @@
 - (void)stopProgram;
 
 - (NSString*)whichSensor:(UInt8)port;
+- (IBAction)startServer:(id)sender;
 
 @end

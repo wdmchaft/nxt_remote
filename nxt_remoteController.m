@@ -345,4 +345,10 @@
     [_nxt setOutputState:kNXTMotorAll power:0 mode:kNXTCoast regulationMode:kNXTRegulationModeIdle turnRatio:0 runState:kNXTMotorRunStateIdle tachoLimit:0];
     [_nxt moveServo:kNXTMotorA power:100 tacholimit:0];
 }
+
+- (IBAction)startServer:(id)sender{
+    ServerController* server = [[ServerController alloc] init];
+    [server startServer];
+}
+
 @end
