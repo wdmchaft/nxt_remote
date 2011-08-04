@@ -89,6 +89,11 @@
 - (IBAction)getDeviceInfo:(id)sender;
 - (IBAction)setOutputState:(id)sender;
 
+-(IBAction)forward:(id)sender;
+-(IBAction)left:(id)sender;
+-(IBAction)right:(id)sender;
+-(IBAction)stop:(id)sender;
+
 - (void)setupInputValues:(UInt8)port;
 - (void)stopProgram;
 

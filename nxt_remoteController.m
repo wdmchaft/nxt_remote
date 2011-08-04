@@ -342,8 +342,31 @@
 }
 
 - (IBAction)setOutputState:(id)sender{
+
+}
+
+-(IBAction)forward:(id)sender{
     [_nxt setOutputState:kNXTMotorAll power:0 mode:kNXTCoast regulationMode:kNXTRegulationModeIdle turnRatio:0 runState:kNXTMotorRunStateIdle tachoLimit:0];
     [_nxt moveServo:kNXTMotorA power:100 tacholimit:0];
+    [_nxt moveServo:kNXTMotorC power:100 tacholimit:0];
+}
+
+-(IBAction)left:(id)sender{
+    [_nxt setOutputState:kNXTMotorAll power:0 mode:kNXTCoast regulationMode:kNXTRegulationModeIdle turnRatio:0 runState:kNXTMotorRunStateIdle tachoLimit:0];
+    [_nxt moveServo:kNXTMotorA power:100 tacholimit:0];
+    [_nxt moveServo:kNXTMotorC power:30 tacholimit:0];
+}
+
+-(IBAction)right:(id)sender{
+    [_nxt setOutputState:kNXTMotorAll power:0 mode:kNXTCoast regulationMode:kNXTRegulationModeIdle turnRatio:0 runState:kNXTMotorRunStateIdle tachoLimit:0];
+    [_nxt moveServo:kNXTMotorA power:30 tacholimit:0];
+    [_nxt moveServo:kNXTMotorC power:100 tacholimit:0];
+}
+
+-(IBAction)stop:(id)sender{
+    [_nxt setOutputState:kNXTMotorAll power:0 mode:kNXTCoast regulationMode:kNXTRegulationModeIdle turnRatio:0 runState:kNXTMotorRunStateIdle tachoLimit:0];
+    [_nxt moveServo:kNXTMotorA power:0 tacholimit:0];
+    [_nxt moveServo:kNXTMotorC power:0 tacholimit:0];
 }
 
 - (IBAction)startServer:(id)sender{
