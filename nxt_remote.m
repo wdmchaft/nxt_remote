@@ -40,10 +40,9 @@
 	     if ([self count])
 		     {
 				 object=[self objectAtIndex:0];
-				 [object retain];
 				 [self removeObjectAtIndex:0];
 			  }
-	return [object autorelease];
+	return object;
 }
 
 - (void)pushObject:(id)object
@@ -228,7 +227,6 @@
 	if ( mBluetoothDevice == device )
 		{
             [mBluetoothDevice closeConnection];
-			[mBluetoothDevice release];
             NSLog(@"Closed connection");
 		}
 }
@@ -239,6 +237,7 @@
 	IOBluetoothDeviceSelectorController *deviceSelector;
 	IOBluetoothSDPUUID				    *sppServiceUUID;
 	NSArray							    *deviceArray;
+    IOBluetoothRFCOMMChannel            *localMRFCOMMChannel;
 
 	NSLog( @"Attempting to connect" );
 	self._delegate = delegate;
@@ -277,16 +276,15 @@
 		}
 
 	// Open asyncronously the rfcomm channel when all the open sequence is completed the implementation of "rfcommChannelOpenComplete:" will be called.
-	if ( ( [device openRFCOMMChannelAsync:&mRFCOMMChannel withChannelID:rfcommChannelID delegate:self] != kIOReturnSuccess ) && ( mRFCOMMChannel != nil ) ) {
+	if ( ( [device openRFCOMMChannelAsync:&localMRFCOMMChannel withChannelID:rfcommChannelID delegate:self] != kIOReturnSuccess ) && ( mRFCOMMChannel != nil ) ) {
 		 // Something went bad. If the device connection is left open close it and return an error:
 		NSLog( @"Error - open sequence failed.***\n" );
 		[self close:device];
 		return FALSE;
 		}
+    mRFCOMMChannel = localMRFCOMMChannel;
       
 	mBluetoothDevice = device;
-	[mBluetoothDevice  retain];
-	[mRFCOMMChannel retain];
     NSLog(@"Connected to device successfully");
 	return TRUE;
 }
@@ -472,22 +470,20 @@
                 
 							memcpy(&bytesRead, dataPointer+i+0, 1); // 3
     
-							data = [[NSData dataWithBytes:(dataPointer+i+1) length:16] retain];
+							data = [NSData dataWithBytes:(dataPointer+i+1) length:16];
 							i += 17;
 							
 							if ( [_delegate respondsToSelector:@selector(NXTLSRead:port:bytesRead:data:)] )
 								[_delegate NXTLSRead:self port:[self popLsReadQueue] bytesRead:bytesRead data:data];
-                                [data release];
 							}
 				
 						else if ( opCode == kNXTGetCurrentProgramName )
 						{
-							NSString *currentProgramName = [[NSString stringWithCString:(dataPointer+i) encoding:NSASCIIStringEncoding] retain]; // 3-22
+							NSString *currentProgramName = [NSString stringWithCString:(dataPointer+i) encoding:NSASCIIStringEncoding]; // 3-22
 							i += 20;
                                 
 							if ( [_delegate respondsToSelector:@selector(NXTCurrentProgramName:currentProgramName:)] )
 								[_delegate NXTCurrentProgramName:self currentProgramName:currentProgramName];
-                                [currentProgramName release];
 							}
 					else if ( opCode == kNXTMessageRead )
 						{
@@ -523,7 +519,7 @@
                     } 
                     else if (opCode == kNXT_SYS_GET_DEVICE_INFO) {
                         
-                        NSString *deviceName = [[NSString stringWithCString:(dataPointer+i) encoding:NSASCIIStringEncoding] retain]; // 3-17
+                        NSString *deviceName = [NSString stringWithCString:(dataPointer+i) encoding:NSASCIIStringEncoding]; // 3-17
                         
                         NSString* bta = [NSString string];
                         bta = [bta stringByAppendingString:[NSString stringWithFormat:@"%x", *((unsigned char *)dataPointer+i+15)]];
@@ -572,7 +568,6 @@
                             [_delegate NXTSysGetDeviceInfo:self nxtName:deviceName btadress:bta];
                             
                         }
-                        [deviceName release];
                         }
 
 					}
@@ -960,11 +955,11 @@
     
 	if ( seconds > 0 ) {
 			NSLog(@"pollSensor: starting poll timer");
-			sensorTimers[port] = [[NSTimer scheduledTimerWithTimeInterval:seconds
+			sensorTimers[port] = [NSTimer scheduledTimerWithTimeInterval:seconds
 												 target:self
 												 selector:@selector(doSensorPoll:)
 												 userInfo:[NSData dataWithBytes:&port length:1]
-												 repeats:YES] retain];
+												 repeats:YES];
 	}
 }
 
@@ -974,22 +969,22 @@
 	[self invalidateSensorTimer:port]; 
     
 	if ( seconds > 0 ) {
-		sensorTimers[port] = [[NSTimer scheduledTimerWithTimeInterval:seconds
+		sensorTimers[port] = [NSTimer scheduledTimerWithTimeInterval:seconds
 											 target:self
 											 selector:@selector(doUltrasoundPoll:)
 											 userInfo:[NSData dataWithBytes:&port length:1]
-											 repeats:YES] retain];
+											 repeats:YES];
 	}
 }
 
 - (void)pollKeepAlive
 {
 	if ( keepAliveTimer == nil ) {
-		keepAliveTimer = [[NSTimer scheduledTimerWithTimeInterval:60
+		keepAliveTimer = [NSTimer scheduledTimerWithTimeInterval:60
 										 target:self
 										 selector:@selector(doKeepAlivePoll:)
 										 userInfo:nil
-										 repeats:YES] retain];
+										 repeats:YES];
 	}
 }
 
@@ -1002,11 +997,11 @@
 			}
     
 	if ( seconds > 0 )
-		batteryLevelTimer = [[NSTimer scheduledTimerWithTimeInterval:seconds
+		batteryLevelTimer = [NSTimer scheduledTimerWithTimeInterval:seconds
 											target:self
 											selector:@selector(doBatteryPoll:)
 											userInfo:nil
-											repeats:YES] retain];
+											repeats:YES];
 }
 
  - (void)pollServo:(UInt8)port interval:(NSTimeInterval)seconds
@@ -1020,11 +1015,11 @@
 		}
      
 	if ( seconds > 0 )
-		motorTimers[port] = [[NSTimer scheduledTimerWithTimeInterval:seconds
+		motorTimers[port] = [NSTimer scheduledTimerWithTimeInterval:seconds
 											target:self
 											selector:@selector(doServoPoll:)
 											userInfo:[NSData dataWithBytes:&port length:1]
-											repeats:YES] retain];
+											repeats:YES];
 }
 
 - (void)stopAllTimers

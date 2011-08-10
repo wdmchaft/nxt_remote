@@ -238,7 +238,7 @@ enum {
 }
 
 @property( readwrite ) BOOL connected;
-@property( readwrite, assign ) id _delegate;
+@property( readwrite, strong) id _delegate;
 
 - (void)alwaysCheckStatus:(BOOL)check;
 
