@@ -16,11 +16,11 @@
 		FA1EC151132B8E0D006BCB70 /* IOBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1EC150132B8E0D006BCB70 /* IOBluetooth.framework */; };
 		FA1EC154132B918A006BCB70 /* nxt_remoteController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1EC153132B918A006BCB70 /* nxt_remoteController.m */; };
 		FA3A43AB1355C6A700865629 /* README in Resources */ = {isa = PBXBuildFile; fileRef = FA3A43AA1355C6A700865629 /* README */; };
-		FA44A76E132A7F56009EC667 /* nxt_remote.m in Sources */ = {isa = PBXBuildFile; fileRef = FA44A76D132A7F56009EC667 /* nxt_remote.m */; };
+		FA44A76E132A7F56009EC667 /* nxt_remote.m in Sources */ = {isa = PBXBuildFile; fileRef = FA44A76D132A7F56009EC667 /* nxt_remote.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		FA455EB0132D4CAD0006095F /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = FA455EAF132D4CAD0006095F /* icon.icns */; };
 		FA81AD09136DB768002AD53A /* nxt.png in Resources */ = {isa = PBXBuildFile; fileRef = FA81AD08136DB768002AD53A /* nxt.png */; };
 		FA978E871355CEE300EBBACE /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = FA978E861355CEE300EBBACE /* LICENSE */; };
-		FADCF5ED13A66A9E00AA3E80 /* ServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FADCF5EC13A66A9E00AA3E80 /* ServerController.m */; };
+		FADCF5ED13A66A9E00AA3E80 /* ServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FADCF5EC13A66A9E00AA3E80 /* ServerController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -254,6 +254,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_MODEL_TUNING = G5;
@@ -270,6 +271,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

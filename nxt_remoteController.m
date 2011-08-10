@@ -50,10 +50,6 @@
 }
 
 
-- (void)dealloc
-{
-    [super dealloc];
-}
 
 - (IBAction)doConnect:(id)sender
 {
@@ -102,7 +98,6 @@
                 [alert setMessageText:@"No program name specified"];
                 [alert setInformativeText:@"Please enter a program name, before starting the program"];
                 [alert runModal];
-                [alert release];
             }
             
             else {
@@ -150,7 +145,6 @@
             [alert setMessageText:@"No sound file name specified"];
             [alert setInformativeText:@"Please enter a sound file name, before playing a sound"];
             [alert runModal];
-            [alert release];
         }
         else {
             
@@ -312,12 +306,10 @@
 - (void)NXTGetFirmwareVersion:(NXT *)nxt minorVersionProtocol:(UInt8)minorVersionProtocol majorVersionProtocol:(UInt8)majorVersionProtocol minorVersionFirmware:(UInt8)minorVersionFirmware majorVersionFirmware:(UInt8)majorVersionFirmware{
     
     NSString* protocolVersionS = [[NSString alloc] initWithFormat:@"%i",majorVersionProtocol];
-    [protocolVersionS autorelease];
     protocolVersionS = [protocolVersionS stringByAppendingFormat:@".%i",minorVersionProtocol];
     [protocolVersion setStringValue:protocolVersionS];
     
     NSString* firmwareVersionS = [[NSString alloc] initWithFormat:@"%i",majorVersionFirmware];
-    [firmwareVersionS autorelease];
     firmwareVersionS = [firmwareVersionS stringByAppendingFormat:@".%i",minorVersionFirmware];
     [firmwareVersion setStringValue:firmwareVersionS];
 }
@@ -370,7 +362,7 @@
 }
 
 - (IBAction)startServer:(id)sender{
-    ServerController* server = [[ServerController alloc] init];
+    server = [[ServerController alloc] init];
     [server startServer];
 }
 

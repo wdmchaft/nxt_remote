@@ -37,6 +37,7 @@
 
 @interface nxt_remoteController : NSObject {
     NXT* _nxt;
+    ServerController* server;
     
     Boolean programStarted;
     Boolean soundStarted;
