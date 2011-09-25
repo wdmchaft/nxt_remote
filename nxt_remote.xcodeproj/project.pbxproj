@@ -15,13 +15,6 @@
 		FA1EC14F132B75EC006BCB70 /* IOBluetoothUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1EC14E132B75EC006BCB70 /* IOBluetoothUI.framework */; };
 		FA1EC151132B8E0D006BCB70 /* IOBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1EC150132B8E0D006BCB70 /* IOBluetooth.framework */; };
 		FA1EC154132B918A006BCB70 /* nxt_remoteController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1EC153132B918A006BCB70 /* nxt_remoteController.m */; };
-		FA30A857142E04F700E376E2 /* MRBluetoothDeviceTransport.m in Sources */ = {isa = PBXBuildFile; fileRef = FA30A84A142E04F700E376E2 /* MRBluetoothDeviceTransport.m */; };
-		FA30A858142E04F700E376E2 /* MRDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = FA30A84C142E04F700E376E2 /* MRDevice.m */; };
-		FA30A859142E04F700E376E2 /* MRDeviceTransport.m in Sources */ = {isa = PBXBuildFile; fileRef = FA30A84E142E04F700E376E2 /* MRDeviceTransport.m */; };
-		FA30A85A142E04F700E376E2 /* MRUSBDeviceEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = FA30A850142E04F700E376E2 /* MRUSBDeviceEntry.m */; };
-		FA30A85B142E04F700E376E2 /* MRUSBDevicePipeDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = FA30A852142E04F700E376E2 /* MRUSBDevicePipeDescriptor.m */; };
-		FA30A85C142E04F700E376E2 /* MRUSBDeviceTransport.m in Sources */ = {isa = PBXBuildFile; fileRef = FA30A854142E04F700E376E2 /* MRUSBDeviceTransport.m */; };
-		FA30A85D142E04F700E376E2 /* NSError+IOKit.m in Sources */ = {isa = PBXBuildFile; fileRef = FA30A856142E04F700E376E2 /* NSError+IOKit.m */; };
 		FA3A43AB1355C6A700865629 /* README in Resources */ = {isa = PBXBuildFile; fileRef = FA3A43AA1355C6A700865629 /* README */; };
 		FA44A76E132A7F56009EC667 /* nxt_remote.m in Sources */ = {isa = PBXBuildFile; fileRef = FA44A76D132A7F56009EC667 /* nxt_remote.m */; };
 		FA455EB0132D4CAD0006095F /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = FA455EAF132D4CAD0006095F /* icon.icns */; };
@@ -47,20 +40,6 @@
 		FA1EC150132B8E0D006BCB70 /* IOBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOBluetooth.framework; path = System/Library/Frameworks/IOBluetooth.framework; sourceTree = SDKROOT; };
 		FA1EC152132B918A006BCB70 /* nxt_remoteController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nxt_remoteController.h; sourceTree = "<group>"; };
 		FA1EC153132B918A006BCB70 /* nxt_remoteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = nxt_remoteController.m; sourceTree = "<group>"; };
-		FA30A849142E04F700E376E2 /* MRBluetoothDeviceTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRBluetoothDeviceTransport.h; sourceTree = "<group>"; };
-		FA30A84A142E04F700E376E2 /* MRBluetoothDeviceTransport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRBluetoothDeviceTransport.m; sourceTree = "<group>"; };
-		FA30A84B142E04F700E376E2 /* MRDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRDevice.h; sourceTree = "<group>"; };
-		FA30A84C142E04F700E376E2 /* MRDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRDevice.m; sourceTree = "<group>"; };
-		FA30A84D142E04F700E376E2 /* MRDeviceTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRDeviceTransport.h; sourceTree = "<group>"; };
-		FA30A84E142E04F700E376E2 /* MRDeviceTransport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRDeviceTransport.m; sourceTree = "<group>"; };
-		FA30A84F142E04F700E376E2 /* MRUSBDeviceEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRUSBDeviceEntry.h; sourceTree = "<group>"; };
-		FA30A850142E04F700E376E2 /* MRUSBDeviceEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRUSBDeviceEntry.m; sourceTree = "<group>"; };
-		FA30A851142E04F700E376E2 /* MRUSBDevicePipeDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRUSBDevicePipeDescriptor.h; sourceTree = "<group>"; };
-		FA30A852142E04F700E376E2 /* MRUSBDevicePipeDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRUSBDevicePipeDescriptor.m; sourceTree = "<group>"; };
-		FA30A853142E04F700E376E2 /* MRUSBDeviceTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRUSBDeviceTransport.h; sourceTree = "<group>"; };
-		FA30A854142E04F700E376E2 /* MRUSBDeviceTransport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRUSBDeviceTransport.m; sourceTree = "<group>"; };
-		FA30A855142E04F700E376E2 /* NSError+IOKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+IOKit.h"; sourceTree = "<group>"; };
-		FA30A856142E04F700E376E2 /* NSError+IOKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+IOKit.m"; sourceTree = "<group>"; };
 		FA3A43AA1355C6A700865629 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		FA44A76C132A7F45009EC667 /* nxt_remote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nxt_remote.h; sourceTree = "<group>"; };
 		FA44A76D132A7F56009EC667 /* nxt_remote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = nxt_remote.m; sourceTree = "<group>"; };
@@ -88,7 +67,6 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				FA30A848142E04F700E376E2 /* DeviceKit */,
 				FADCF5EB13A66A9E00AA3E80 /* ServerController.h */,
 				FADCF5EC13A66A9E00AA3E80 /* ServerController.m */,
 				FA44A76C132A7F45009EC667 /* nxt_remote.h */,
@@ -173,27 +151,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FA30A848142E04F700E376E2 /* DeviceKit */ = {
-			isa = PBXGroup;
-			children = (
-				FA30A849142E04F700E376E2 /* MRBluetoothDeviceTransport.h */,
-				FA30A84A142E04F700E376E2 /* MRBluetoothDeviceTransport.m */,
-				FA30A84B142E04F700E376E2 /* MRDevice.h */,
-				FA30A84C142E04F700E376E2 /* MRDevice.m */,
-				FA30A84D142E04F700E376E2 /* MRDeviceTransport.h */,
-				FA30A84E142E04F700E376E2 /* MRDeviceTransport.m */,
-				FA30A84F142E04F700E376E2 /* MRUSBDeviceEntry.h */,
-				FA30A850142E04F700E376E2 /* MRUSBDeviceEntry.m */,
-				FA30A851142E04F700E376E2 /* MRUSBDevicePipeDescriptor.h */,
-				FA30A852142E04F700E376E2 /* MRUSBDevicePipeDescriptor.m */,
-				FA30A853142E04F700E376E2 /* MRUSBDeviceTransport.h */,
-				FA30A854142E04F700E376E2 /* MRUSBDeviceTransport.m */,
-				FA30A855142E04F700E376E2 /* NSError+IOKit.h */,
-				FA30A856142E04F700E376E2 /* NSError+IOKit.m */,
-			);
-			path = DeviceKit;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -268,13 +225,6 @@
 				FA44A76E132A7F56009EC667 /* nxt_remote.m in Sources */,
 				FA1EC154132B918A006BCB70 /* nxt_remoteController.m in Sources */,
 				FADCF5ED13A66A9E00AA3E80 /* ServerController.m in Sources */,
-				FA30A857142E04F700E376E2 /* MRBluetoothDeviceTransport.m in Sources */,
-				FA30A858142E04F700E376E2 /* MRDevice.m in Sources */,
-				FA30A859142E04F700E376E2 /* MRDeviceTransport.m in Sources */,
-				FA30A85A142E04F700E376E2 /* MRUSBDeviceEntry.m in Sources */,
-				FA30A85B142E04F700E376E2 /* MRUSBDevicePipeDescriptor.m in Sources */,
-				FA30A85C142E04F700E376E2 /* MRUSBDeviceTransport.m in Sources */,
-				FA30A85D142E04F700E376E2 /* NSError+IOKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
