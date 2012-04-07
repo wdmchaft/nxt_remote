@@ -1,11 +1,11 @@
-
 //
 //  nxt_remote.h
 //  nxt_remote
 //
+//  Copyright (c) 2011-2012 Alexander Zautke. All rights reserved.
+//
 
 /*
-Copyright (c) 2011 Alexander Zautke
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -2,7 +2,9 @@
 //  nxt_remoteAppDelegate.m
 //  nxt_remote
 //
-//  Created by Alexander Zautke on 3/10/11.
+//  Copyright (c) 2011-2012 Alexander Zautke. All rights reserved.
+//  This code is released under the MIT License (MIT).
+//  For conditions of distribution and use, see the disclaimer and license in nxt_remote.h
 //
 
 #import "nxt_remoteAppDelegate.h"

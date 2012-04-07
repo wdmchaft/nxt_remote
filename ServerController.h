@@ -2,8 +2,9 @@
 //  ServerController.h
 //  nxt_remote
 //
-//  Created by Alexander Zautke on 6/13/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2011-2012 Alexander Zautke. All rights reserved.
+//  This code is released under the MIT License (MIT).
+//  For conditions of distribution and use, see the disclaimer and license in nxt_remote.h
 //
 
 #import <Foundation/Foundation.h>
