@@ -1,9 +1,8 @@
-
 //
 //  nxt_remoteController.h
 //  nxt_remote
 //
-//  Copyright (c) 2011-2012 Alexander Zautke. All rights reserved.
+//  Copyright (c) 2011-2012 Alexander Zautke.
 //  This code is released under the MIT License (MIT).
 //  For conditions of distribution and use, see the disclaimer and license in nxt_remote.h
 //

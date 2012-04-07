@@ -2,7 +2,7 @@
 //  nxt_remote.h
 //  nxt_remote
 //
-//  Copyright (c) 2011-2012 Alexander Zautke. All rights reserved.
+//  Copyright (c) 2011-2012 Alexander Zautke.
 //
 
 /*
