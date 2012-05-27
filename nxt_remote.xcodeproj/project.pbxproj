@@ -20,6 +20,8 @@
 		FA455EB0132D4CAD0006095F /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = FA455EAF132D4CAD0006095F /* icon.icns */; };
 		FA81AD09136DB768002AD53A /* nxt.png in Resources */ = {isa = PBXBuildFile; fileRef = FA81AD08136DB768002AD53A /* nxt.png */; };
 		FA978E871355CEE300EBBACE /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = FA978E861355CEE300EBBACE /* LICENSE */; };
+		FAB144F5157224CF00552374 /* nxt-control-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAB144F4157224CF00552374 /* nxt-control-logo.jpg */; };
+		FAB144F7157224E000552374 /* logonxtremote 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAB144F6157224E000552374 /* logonxtremote 2.jpg */; };
 		FADCF5ED13A66A9E00AA3E80 /* ServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FADCF5EC13A66A9E00AA3E80 /* ServerController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,8 @@
 		FA455EAF132D4CAD0006095F /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		FA81AD08136DB768002AD53A /* nxt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nxt.png; sourceTree = "<group>"; };
 		FA978E861355CEE300EBBACE /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		FAB144F4157224CF00552374 /* nxt-control-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "nxt-control-logo.jpg"; sourceTree = "<group>"; };
+		FAB144F6157224E000552374 /* logonxtremote 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "logonxtremote 2.jpg"; sourceTree = "<group>"; };
 		FADCF5EB13A66A9E00AA3E80 /* ServerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerController.h; sourceTree = "<group>"; };
 		FADCF5EC13A66A9E00AA3E80 /* ServerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,9 +135,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FA81AD08136DB768002AD53A /* nxt.png */,
+				FAB144F3157224C000552374 /* Icons */,
 				8D1107310486CEB800E47090 /* nxt_remote-Info.plist */,
-				FA455EAF132D4CAD0006095F /* icon.icns */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
 				FA3A43AA1355C6A700865629 /* README */,
@@ -149,6 +152,17 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FAB144F3157224C000552374 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				FA81AD08136DB768002AD53A /* nxt.png */,
+				FA455EAF132D4CAD0006095F /* icon.icns */,
+				FAB144F4157224CF00552374 /* nxt-control-logo.jpg */,
+				FAB144F6157224E000552374 /* logonxtremote 2.jpg */,
+			);
+			name = Icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +224,8 @@
 				FA3A43AB1355C6A700865629 /* README in Resources */,
 				FA978E871355CEE300EBBACE /* LICENSE in Resources */,
 				FA81AD09136DB768002AD53A /* nxt.png in Resources */,
+				FAB144F5157224CF00552374 /* nxt-control-logo.jpg in Resources */,
+				FAB144F7157224E000552374 /* logonxtremote 2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
